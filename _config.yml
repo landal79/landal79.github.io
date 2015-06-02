@@ -12,3 +12,6 @@ github_username:  landal79
 
 # Build settings
 markdown: kramdown
+
+timezone: Europe/Rome
+highlighter: pygments
