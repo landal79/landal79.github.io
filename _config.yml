@@ -1,5 +1,6 @@
 # Site settings
-title: Programming Illusions
+title: Programming illusions
+subtitle: Programming is an illusion, but I'm not an illusionist
 email: alex.landini@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -9,6 +10,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://landal79.github.io"
 twitter_username: landal79
 github_username:  landal79
+linkedin_url: https://it.linkedin.com/in/alexlandini
 
 # Build settings
 markdown: kramdown
@@ -17,5 +19,6 @@ timezone: Europe/Rome
 highlighter: pygments
 
 #pagination
-paginate: 5
+paginate: 10
 paginate_path: "/blog/page:num/"
+permalink: pretty
