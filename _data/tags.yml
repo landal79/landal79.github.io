@@ -1,0 +1,11 @@
+clean-code:
+    page: clean-code
+    name: Clean Code
+
+oop:
+    page: oop
+    name: OOP
+
+patterns:
+   page: patterns
+   name: Patterns

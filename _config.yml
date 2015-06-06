@@ -22,3 +22,7 @@ highlighter: pygments
 paginate: 10
 paginate_path: "/blog/page:num/"
 permalink: pretty
+
+#tags
+tag_dir: /tag/
+tag_layout: "article_by_tag.html"

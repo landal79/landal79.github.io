@@ -5,7 +5,20 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">
+      {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+      {% if page.tags.size > 0 %}
+        <div id="post-tags">
+          {% for tag in page.tags %}
+            {% assign tagVar = site.data.tags[tag] %}
+            <a href="/tag/{{tagVar.page}}/">
+              <i class="fa fa-tag">{{tagVar.name}}</i>
+            </a>{% if forloop.last != true %},{% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+    </p>
   </header>
 
   <article class="post-content">

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Anti-if patterns: Enums"
+tags: [clean-code,oop,patterns]
 #date: 2015-06-03T00:32:23+02:00
 ---
 
