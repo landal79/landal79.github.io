@@ -1,0 +1,8 @@
+{% if page.tags.size> 0 %}
+<div class="post-tags">
+  {% for tag in page.tags %}
+    {% assign tagVar = site.data.tags[tag] %}
+    <a href="/tag/{{tagVar.page}}/"><i class="fa fa-tag">{{tagVar.name}}</i></a>{% if forloop.last != true %},{% endif %}
+  {% endfor %}
+</div>
+{% endif %}

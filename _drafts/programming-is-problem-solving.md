@@ -4,7 +4,7 @@ title: "Programming is problem solving"
 tags: [clean-code,oop]
 #date: 2015-06-03T00:32:23+02:00
 ---
-The first thing we learn in computer science is to create algorithms,
+The first thing we learn as we approach computer science are algorithms,
 there are various definition of algorithms but I like the [merriam-webster](http://www.merriam-webster.com/dictionary/algorithm){:target="_blank"} one:
 
 > a procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation; broadly :  a step-by-step procedure for solving a problem or accomplishing some end especially by a computer
@@ -14,7 +14,7 @@ In my opinion problem solving include two parts:
 - Understanding the problem
 - Solving the problem
 
-According to [Problem Solving for Software Engineers][]{:target="_blank"} there are even four phases:
+According to [Problem Solving for Software Engineers][]{:target="_blank"} there are four phases:
 
 >- Understanding the problem
 >- Devising the plan
