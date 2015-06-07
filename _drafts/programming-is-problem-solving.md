@@ -9,7 +9,8 @@ there are various definition of algorithms but I like the [merriam-webster](http
 
 > a procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation; broadly :  a step-by-step procedure for solving a problem or accomplishing some end especially by a computer
 
-I would like to highlight the word **problem**, so programming is about problem solving.
+I would like to highlight the word **problem**,
+so programming is about problem solving.
 In my opinion problem solving include two parts:
 - Understanding the problem
 - Solving the problem
@@ -22,7 +23,8 @@ According to [Problem Solving for Software Engineers][]{:target="_blank"} there 
 >- Retrospection
 
 ### Understanding the problem
-It may seem obvious that in order to be able to solve a problem, we have to first understand it. Nothing is farther from reality in the IT business. It is not uncommon in my profession to see entire applications and architectures flawed and crippled by initial misunderstandings of a problem or requirement. While spending time to deeply understand what we have to build may not sound like the most ‘agile’ thing to do, the price to pay for a faulty start could be quite high.
+This could seem pretty obvious but often we start programming without thinking deeply about the problem we are trying to solve, as result we code is creep.
+
 
 ### Improve problem solving skills
 
