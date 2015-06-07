@@ -5,6 +5,10 @@ tags: [clean-code]
 #date: 2015-06-03T00:32:23+02:00
 ---
 
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Beautiful code, like beautiful prose, is the result of many small decisions. The right method length here, the right object name there.</p>&mdash; DHH (@dhh) <a href="https://twitter.com/dhh/status/447042824622850048">March 21, 2014</a>
+</blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 Why we do really care about _clean code_
 
 > Its estimated that on an average a developer spends around 80% percent of the time reading code that has already been written. Efficiency of team can greatly decrease if the time spent by developers in reading and understanding the code increases from 80% to 90-95%
