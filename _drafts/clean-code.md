@@ -5,9 +5,9 @@ tags: [clean-code]
 #date: 2015-06-03T00:32:23+02:00
 ---
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Beautiful code, like beautiful prose, is the result of many small decisions. The right method length here, the right object name there.</p>&mdash; DHH (@dhh) <a href="https://twitter.com/dhh/status/447042824622850048">March 21, 2014</a>
+<blockquote class="twitter-tweet" lang="en">
+    <p lang="en" dir="ltr">Beautiful code, like beautiful prose, is the result of many small decisions. The right method length here, the right object name there.</p>&mdash; DHH (@dhh) <a href="https://twitter.com/dhh/status/447042824622850048">March 21, 2014</a>
 </blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Why we do really care about _clean code_
 
@@ -15,11 +15,13 @@ Why we do really care about _clean code_
 
 So what can what is clean code:
 
-Clean code is about recognizing that your audience isn’t just a computer, it’s real-live humans! With this principle in mind.
+Clean code is about recognizing that your audience isn’t just a computer, but are your fellow developers.
 
 > Programming is the art of telling another human what one wants the computer to do.
 >
 > Donald Knuth
+
+
 
 Donald Knuth formalized the concept of [_literate programming_][literateprogramming]:
 
