@@ -10,35 +10,34 @@ tags: [clean-code]
 </blockquote>
 
 
-_Clean code_ is subjective, we can call it _sense of code_, every developer has it's own. There are some ideas that are considered best practice and what constitutes as clean code within the industry and community, but there is no definitive distinction. Here I'll try to give my overview.
 
-Why we should really care about _clean code_
+Every developer has a kind of six sense, that we can call _sense of code_, this is a very personal feeling about what is a good code. _Clean code_ could be considered the formalization effort of best programmers' sense of code, which they've developed through their experience.
+
+Before listing the practices to achieve clean code, let's try to understand what has led to those practices.
+
+Why we should really care about _clean code_, according to Robert Martin [Clean code][]{:target="_blank"} book:
 
 > Its estimated that on an average a developer spends around 80% percent of the time reading code that has already been written. Efficiency of team can greatly decrease if the time spent by developers in reading and understanding the code increases from 80% to 90-95%
 
-So what can what is clean code:
-
+So developers need to write *easily understandable code* for other developers.  
 Clean code is about recognizing that your audience isn’t just a computer, but are your fellow developers.
 
 > Programming is the art of telling another human what one wants the computer to do.
 >
 > Donald Knuth
 
-
-
 Donald Knuth formalized the concept of [_literate programming_][literateprogramming]{:target="_blank"}:
 
 > The practitioner of literate programming can be regarded as an essayist, whose main concern is with exposition and excellence of style. Such an author, with thesaurus in hand, chooses the names of variables carefully and explains what each variable means. He or she strives for a program that is comprehensible because its concepts have been introduced in an order that is best for human understanding, using a mixture of formal and informal methods that reinforce each other.
 
 Maybe this is to much, but it highlights an analogy between programming and writing.
-So the code should tell a clear compelling story, whose topics are the requirements.
+The code should tell a clear compelling story, whose topics are the requirements.
 Developers write it by using classes, methods (or functions), variables, expressions and comments.
-So our stories are the requirements and our tools are the set are our programming language constructs.
-To became good writer, we as developers need to practice with good programming practice, to learn how to organize painlessly our code.
+To become good writer, we as developers need to practice with good programming practice, to learn how to organize painlessly our code.
 
 What are the principles that clean code has:
 
-- Meaningfull and descriptive naming
+- Meaningful and descriptive naming
 - Proper expressive abstractions
 - It's readable and expressive
 
@@ -46,7 +45,7 @@ What are the principles that clean code has:
 Robert Martin in the book [Clean code][]{:target="_blank"} gives some rules about how to write good code.
 So What are clean code principles:
 
-- Meaningfull names
+- Meaningful names
 - Functions
 - Comments
 - Object and data structure
@@ -55,7 +54,7 @@ So What are clean code principles:
 - Classes
 
 ### References
-- [literateprogramming][]
+- [literate programming][literateprogramming]
 - [pluralsight][]
 - [Clean code][]
 
