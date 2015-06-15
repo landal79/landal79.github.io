@@ -10,7 +10,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://landal79.github.io"
 twitter_username: landal79
 github_username:  landal79
-linkedin_url: https://it.linkedin.com/in/alexlandini
+linkedin_username: alexlandini
 
 # Build settings
 markdown: kramdown
@@ -27,8 +27,8 @@ permalink: pretty
 tag_dir: /tag/
 tag_layout: "article_by_tag.html"
 
-gems:
-  - jekyll-archives
+#gems:
+#  - jekyll-archives
 
 jekyll-archives:
   enabled: []
