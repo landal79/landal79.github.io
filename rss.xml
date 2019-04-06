@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Coding Illusions]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://landal79.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Thu, 04 Apr 2019 21:34:45 GMT</lastBuildDate><item><title><![CDATA[Anti-if patterns: Enums]]></title><description><![CDATA[Introduction In this post I’ll try to illustrate a pattern to avoid if statements. The problem The pattern The solution is to Enum in more…]]></description><link>https://landal79.github.io//anti-if-patterns-enums/</link><guid isPermaLink="false">https://landal79.github.io//anti-if-patterns-enums/</guid><pubDate>Tue, 02 Jun 2015 22:32:23 GMT</pubDate><content:encoded>&lt;h2&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Coding Illusions]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://landal79.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 06 Apr 2019 21:14:45 GMT</lastBuildDate><item><title><![CDATA[Clean code: Functions]]></title><description><![CDATA[Robert Martin {:target=” blank”} in his  Clean code book {:target=” blank”} summarizes the main feature of well written function: should be…]]></description><link>https://landal79.github.io//clean-code-functions/</link><guid isPermaLink="false">https://landal79.github.io//clean-code-functions/</guid><content:encoded>&lt;p&gt;&lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;Robert Martin&lt;/a&gt;{:target=”&lt;em&gt;blank”} in his &lt;a href=&quot;http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&quot;&gt;Clean code book&lt;/a&gt;{:target=”&lt;/em&gt;blank”} summarizes the main feature of well written function:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;should be small&lt;/li&gt;
+&lt;li&gt;does only one thing&lt;/li&gt;
+&lt;li&gt;should be one level of abstraction below the concept represented by the function&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Small!!&lt;/h3&gt;
+&lt;h3&gt;Do only one thing&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;FUNCTIONS SHOULD DO ONE THING. THEY SHOULD DO IT WELL.
+THEY SHOULD DO IT ONLY.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Single level of abstraction principle (SLAP)&lt;/h3&gt;
+&lt;p&gt;Single Level of Abstraction, by Kent Beck, states that to make code easy to read and understand you shouldn’t use code that are in different levels of abstraction and details in the same method! It’s better to have same level of abstraction for the statements inside a method! In other words, you shouldn’t have a method which mixes low-level details, such as database connectivity management or web services data marshaling with high-level business code.
+Let’s start with a simple example:&lt;/p&gt;
+&lt;p&gt;{% gist d26ea4e69bdf8efdd4e4 %}&lt;/p&gt;
+&lt;p&gt;Despite the example is very trivial, it serves the purpose.
+The scope of the function is clear but, it compares two files, but it mixes low level java APIs to read the file content as string, and then it compares two lists of file lines.
+Let’s try to refactor to separate levels of abstraction.&lt;/p&gt;
+&lt;p&gt;{% gist da6063ba2eae67e8c2cd %}&lt;/p&gt;
+&lt;p&gt;First of all the example violates the &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY principle&lt;/a&gt;, so we do a little refactoring by &lt;a href=&quot;http://refactoring.com/catalog/extractMethod.html&quot;&gt;extracting a method&lt;/a&gt; &lt;code class=&quot;language-text&quot;&gt;readFileLines&lt;/code&gt;. Then we create another method &lt;code class=&quot;language-text&quot;&gt;compareLines&lt;/code&gt;, now the compare contains code at one line level of abstraction, and each function does exatly one thing.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Object factories]]></title><description><![CDATA[Bla bla bla bla bla bla bla bla bla bla bla ]]></description><link>https://landal79.github.io//object-factories/</link><guid isPermaLink="false">https://landal79.github.io//object-factories/</guid><content:encoded>&lt;p&gt;Bla bla bla bla bla bla bla bla bla bla bla &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Programming is problem solving]]></title><description><![CDATA[The first thing we learn as we approach computer science are algorithms,
+there are various definition of algorithms but I like the  merriam…]]></description><link>https://landal79.github.io//programming-is-problem-solving/</link><guid isPermaLink="false">https://landal79.github.io//programming-is-problem-solving/</guid><content:encoded>&lt;p&gt;The first thing we learn as we approach computer science are algorithms,
+there are various definition of algorithms but I like the &lt;a href=&quot;http://www.merriam-webster.com/dictionary/algorithm&quot;&gt;merriam-webster&lt;/a&gt;{:target=“_blank”} one:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a procedure for solving a mathematical problem (as of finding the greatest common divisor) in a finite number of steps that frequently involves repetition of an operation; broadly :  a step-by-step procedure for solving a problem or accomplishing some end especially by a computer&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I would like to highlight the word &lt;strong&gt;problem&lt;/strong&gt;,
+so programming is about problem solving.
+In my opinion problem solving include two parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understanding the problem&lt;/li&gt;
+&lt;li&gt;Solving the problem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;According to &lt;a href=&quot;http://www.codeproject.com/Articles/858726/Problem-Solving-for-Software-Engineers&quot;&gt;Problem Solving for Software Engineers&lt;/a&gt;{:target=“_blank”} there are four phases:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Understanding the problem&lt;/li&gt;
+&lt;li&gt;Devising the plan&lt;/li&gt;
+&lt;li&gt;Carrying out the plan&lt;/li&gt;
+&lt;li&gt;Retrospection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Understanding the problem&lt;/h3&gt;
+&lt;p&gt;This could seem pretty obvious but often we start programming without thinking deeply about the problem we are trying to solve, as result we code is creep.&lt;/p&gt;
+&lt;h3&gt;Improve problem solving skills&lt;/h3&gt;
+&lt;p&gt;What us as developers should do, it’s to improve a little our problem solving skills everyday.&lt;/p&gt;
+&lt;p&gt;There are a multitude of way to improve problem solving skills as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;randomly try something&lt;/li&gt;
+&lt;li&gt;read random articles/blogs/posts about the topic I am concerned with (or a closely connected topic)&lt;/li&gt;
+&lt;li&gt;making a nice drawing&lt;/li&gt;
+&lt;li&gt;split the problem into multiple but simpler problems (The never died &lt;strong&gt;divide and conquer technique&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;do something else&lt;/li&gt;
+&lt;li&gt;Google something that is related in some way to the problem&lt;/li&gt;
+&lt;li&gt;talk to others about the problem&lt;/li&gt;
+&lt;li&gt;make a TODO list&lt;/li&gt;
+&lt;li&gt;write down stuff you know about the problem’s effect so you can more easily find patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.codeproject.com/Articles/858726/Problem-Solving-for-Software-Engineers&quot;&gt;Problem Solving for Software Engineers&lt;/a&gt;{:target=“_blank”}&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Anti-if patterns: Enums]]></title><description><![CDATA[Introduction In this post I’ll try to illustrate a pattern to avoid if statements. The problem The pattern The solution is to Enum in more…]]></description><link>https://landal79.github.io//anti-if-patterns-enums/</link><guid isPermaLink="false">https://landal79.github.io//anti-if-patterns-enums/</guid><pubDate>Tue, 02 Jun 2015 22:32:23 GMT</pubDate><content:encoded>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this post I’ll try to illustrate a pattern to avoid if statements.&lt;/p&gt;
 &lt;h2&gt;The problem&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-java line-numbers&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;WidgetTypes&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -57,6 +118,51 @@
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1167589/anti-if-campaign&quot;&gt;Stackoverflow Anti-if Campaign&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Clean code: a review]]></title><description><![CDATA[Every developer has a kind of six sense, that we can call  sense of code , this is a very personal feeling about what is a good code.  Clean…]]></description><link>https://landal79.github.io//clean-code/</link><guid isPermaLink="false">https://landal79.github.io//clean-code/</guid><pubDate>Tue, 02 Jun 2015 22:32:23 GMT</pubDate><content:encoded>&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;
+    &lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Beautiful code, like beautiful prose, is the result of many small decisions. The right method length here, the right object name there.&lt;/p&gt;&amp;mdash; DHH (@dhh) &lt;a href=&quot;https://twitter.com/dhh/status/447042824622850048&quot;&gt;March 21, 2014&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Every developer has a kind of six sense, that we can call &lt;em&gt;sense of code&lt;/em&gt;, this is a very personal feeling about what is a good code. &lt;em&gt;Clean code&lt;/em&gt; could be considered the formalization effort of best programmers’ sense of code, which they’ve developed through their experience.&lt;/p&gt;
+&lt;p&gt;Before listing the practices to achieve clean code, let’s try to understand what has led to those practices.&lt;/p&gt;
+&lt;p&gt;Why we should really care about &lt;em&gt;clean code&lt;/em&gt;, according to Robert Martin &lt;a href=&quot;http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&quot;&gt;Clean code&lt;/a&gt;{:target=“_blank”} book:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Its estimated that on an average a developer spends around 80% percent of the time reading code that has already been written. Efficiency of team can greatly decrease if the time spent by developers in reading and understanding the code increases from 80% to 90-95%&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So developers need to write &lt;em&gt;easily understandable code&lt;/em&gt; for other developers.&lt;br&gt;
+Clean code is about recognizing that your audience isn’t just a computer, but are your fellow developers.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Programming is the art of telling another human what one wants the computer to do.&lt;/p&gt;
+&lt;p&gt;Donald Knuth&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Donald Knuth formalized the concept of &lt;a href=&quot;http://www.literateprogramming.com/&quot;&gt;&lt;em&gt;literate programming&lt;/em&gt;&lt;/a&gt;{:target=“_blank”}:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The practitioner of literate programming can be regarded as an essayist, whose main concern is with exposition and excellence of style. Such an author, with thesaurus in hand, chooses the names of variables carefully and explains what each variable means. He or she strives for a program that is comprehensible because its concepts have been introduced in an order that is best for human understanding, using a mixture of formal and informal methods that reinforce each other.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Maybe this is to much, but it highlights an analogy between programming and writing.
+The code should tell a clear compelling story, whose topics are the requirements.
+Developers write it by using classes, methods (or functions), variables, expressions and comments.
+To become good writer, we as developers need to practice with good programming practice, to learn how to organize painlessly our code.&lt;/p&gt;
+&lt;p&gt;What are the principles that clean code has:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Meaningful and descriptive naming&lt;/li&gt;
+&lt;li&gt;Proper expressive abstractions&lt;/li&gt;
+&lt;li&gt;It’s readable and expressive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Robert Martin in the book &lt;a href=&quot;http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&quot;&gt;Clean code&lt;/a&gt;{:target=“_blank”} gives some rules about how to write good code.
+So What are clean code principles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Meaningful names&lt;/li&gt;
+&lt;li&gt;Functions&lt;/li&gt;
+&lt;li&gt;Comments&lt;/li&gt;
+&lt;li&gt;Object and data structure&lt;/li&gt;
+&lt;li&gt;Error handling&lt;/li&gt;
+&lt;li&gt;Unit testing&lt;/li&gt;
+&lt;li&gt;Classes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.literateprogramming.com/&quot;&gt;literate programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.pluralsight.com/7-reasons-clean-code-matters&quot;&gt;pluralsight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&quot;&gt;Clean code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://landal79.github.io//hi-folks/</link><guid isPermaLink="false">https://landal79.github.io//hi-folks/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
